@@ -24,6 +24,7 @@ function calorie_counter(input){
     }else{
       elves_bags[current_elf]+=parseInt(element);
     }
+    // if the current elf's bag is bigger than one of the top 3, add it to the top 3
     for(let i=0;i<3;i++){
       if(elves_bags[current_elf]>top_3_elves[i]){
         top_3_elves.splice(i,0,elves_bags[current_elf]);
@@ -32,6 +33,7 @@ function calorie_counter(input){
     }
     
   });
+  // Remove all values but the top 3
   top_3_elves.splice(3);
   
   // Give the answer
