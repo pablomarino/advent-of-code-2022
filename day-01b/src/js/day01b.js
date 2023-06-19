@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { exit } = require('process');
 
 fs.readFile('input/input.txt', 'utf8', (error, data) => {
   if (error) {
@@ -35,13 +34,8 @@ function calorie_counter(input){
   });
   top_3_elves.splice(3);
   
-
   // Give the answer
-  console.table(elves_bags);
-  let total_calories = 0;
-  top_3_elves.forEach((top_elf,index) => {
-    console.log(`Elf #${index} carries max calories: ${top_elf}`);
-    total_calories+=top_elf;
-  });
-  console.log(`Total calories: ${total_calories}`);
+  console.table(top_3_elves);
+  let total_calories = top_3_elves.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  console.log(`Top 3 Elves total calories: ${total_calories}`);
 }
