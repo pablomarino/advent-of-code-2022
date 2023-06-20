@@ -41,7 +41,7 @@ const calorie_counter = async(filePath) =>{
   return top_3_elves;
 }
 
-
+/*
 // Give the answer
 const filePath = 'input/input.txt';
 calorie_counter(filePath).then(result => { 
@@ -49,5 +49,5 @@ calorie_counter(filePath).then(result => {
   let total_calories = result.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(`Top 3 Elves total calories: ${total_calories}`);
 });
-
+*/
 module.exports = calorie_counter;
