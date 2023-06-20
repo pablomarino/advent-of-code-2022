@@ -1,7 +1,6 @@
 const calorie_counter = require('./day01b.js');
 const filePath = 'input/input.txt';
-// Given the input file, 
-// When thtop 3 elves should have the following calorie counts:
+
 describe('GIVEN the input.txt file WHEN calculates top 3 elves calorie count', () => {
   test('THEN the returned value length should be 3', () => {
     expect(calorie_counter(filePath).then(
